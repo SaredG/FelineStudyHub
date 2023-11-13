@@ -21,5 +21,7 @@ FelineStudyHub es una aplicación móvil desarrollada en React Native que combin
 ## Tecnologías Utilizadas
 
 - React Native
+- React Native Paper
 - Almacenamiento Local
-- API para imágenes de gatos
+- CatApi
+
