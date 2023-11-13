@@ -7,20 +7,15 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
-    // Comprueba las credenciales (esto puede ser más complejo en una aplicación real)
     if (username === 'usuario1' && password === 'contraseña1') {
       try {
-        // Almacena el estado de inicio de sesión
         await AsyncStorage.setItem('isLoggedIn', 'true');
-        // Almacena el nombre de usuario
         await AsyncStorage.setItem('username', username);
-        // Navega a la pantalla HomeScreen
         navigation.navigate('Home');
       } catch (error) {
         console.error('Error al almacenar datos de inicio de sesión:', error);
       }
     } else {
-      // Manejo de credenciales incorrectas
       alert('Credenciales incorrectas');
     }
   };

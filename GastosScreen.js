@@ -34,7 +34,6 @@ class GastosApp extends Component {
   agregarGasto = async () => {
     const { gastos, nuevoGasto, descripcionGasto } = this.state;
 
-    // Validar que nuevoGasto sea numérico
     if (!isNaN(parseFloat(nuevoGasto)) && isFinite(nuevoGasto)) {
       if (nuevoGasto) {
         const nuevoRegistro = {
@@ -54,7 +53,6 @@ class GastosApp extends Component {
         }
       }
     } else {
-      // Mostrar mensaje de error o realizar otra acción en caso de que el valor no sea numérico
       console.error('El valor ingresado no es numérico.');
     }
   }
@@ -79,7 +77,7 @@ class GastosApp extends Component {
             placeholder="Ingrese el gasto"
             value={this.state.nuevoGasto}
             onChangeText={(text) => this.setState({ nuevoGasto: text })}
-            keyboardType="numeric"  // Esto permite mostrar el teclado numérico en dispositivos móviles
+            keyboardType="numeric"  
           />
           <TextInput
             style={styles.input}
@@ -91,7 +89,6 @@ class GastosApp extends Component {
         <PaperButton mode="contained" onPress={this.agregarGasto} style={styles.button}>
           Agregar Gasto
         </PaperButton>
-        {/* Nuevo botón "Limpiar" */}
         <PaperButton mode="outlined" onPress={this.limpiarGastos} style={styles.button}>
           Limpiar
         </PaperButton>

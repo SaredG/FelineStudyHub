@@ -163,17 +163,17 @@ const styles = {
     borderRadius: 8,
   },
   cardContent: {
-    alignItems: 'center', // Centrar el contenido de la tarjeta
+    alignItems: 'center', 
   },
   questionText: {
     fontSize: 16,
     fontWeight: 'bold',
-    textAlign: 'center', // Centrar el texto de la pregunta
+    textAlign: 'center', 
   },
   answerText: {
     fontSize: 16,
     fontStyle: 'italic',
-    textAlign: 'justify', // Cambiar 'left' a 'justify'
+    textAlign: 'justify', 
   },
   
   input: {

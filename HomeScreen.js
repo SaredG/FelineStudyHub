@@ -21,11 +21,9 @@ const HomeScreen = ({ navigation }) => {
   );
 
   const handleLogout = async () => {
-    // Lógica de cierre de sesión, por ejemplo, limpiar datos de usuario o redirigir a la pantalla de inicio de sesión
-    // Ejemplo: Limpiar datos de usuario almacenados localmente
+
     await AsyncStorage.removeItem('usuario');
 
-    // Reset the navigation stack to the top and navigate to the 'Inicio' screen
     navigation.popToTop();
     navigation.navigate('Inicio');
   };
@@ -33,14 +31,14 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Appbar.Header style={styles.appbar}>
-        <Appbar.Content title="¡Flashcards!" titleStyle={styles.title} />
+        <Appbar.Content title="FelineStudyHub!" titleStyle={styles.title} />
         <IconButton icon="exit-to-app" color="#fff" onPress={handleLogout} />
       </Appbar.Header>
 
       <View style={styles.contentContainer}>
         <Card style={styles.card}>
           <Card.Content>
-            <Title style={styles.cardTitle}>¡Bienvenido a la aplicación de Flashcards!</Title>
+            <Title style={styles.cardTitle}>¡Bienvenido a la aplicación de FelineStudyHub!</Title>
           </Card.Content>
           <FlatList
             data={data}
